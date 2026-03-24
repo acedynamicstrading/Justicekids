@@ -1,8 +1,4 @@
-<
-// ── Chapter image aliases ──
-IMGS.rights = IMGS.hero;      // Ch2: Leo discovers rights (hero pointing)
-IMGS.rocket = IMGS.pointing;  // Ch4: Leo with rocket (clean pointing pose)
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -83,7 +79,7 @@ nav{
              radial-gradient(ellipse at 70% 30%,rgba(212,168,67,0.07),transparent 50%);
 }
 .hero-inner{position:relative;z-index:1;max-width:900px;margin:0 auto;}
-.hero-leo{display:none;/*
+.hero-leo{
   width:160px;margin:0 auto 20px;
   animation:floatBob 3s ease-in-out infinite;
   filter:drop-shadow(0 12px 24px rgba(0,0,0,0.3));
@@ -429,6 +425,8 @@ footer{
 .delay-2{animation-delay:0.2s}
 .delay-3{animation-delay:0.3s}
 .delay-4{animation-delay:0.4s}
+#leo-float{display:none!important;}
+#hero-leo{display:none!important;}
 </style>
 </head>
 <body>
@@ -448,12 +446,11 @@ body{top:0!important;}
 </div>
 <script>
 function googleTranslateElementInit(){try{new google.translate.TranslateElement({pageLanguage:"en",includedLanguages:"si,ta,fr,de,zh-CN,ja,ko,ar,ru,es,pt,it,nl,hi,ms,th,id,vi,tr,pl,uk,sv,da,fi,no,cs,sk,ro,bg,hr,el,he,hu",layout:google.translate.TranslateElement.InlineLayout.SIMPLE,autoDisplay:false},"g-translate-el");}catch(e){}}
-window.addEventListener("load",function(){var s=document.createElement("script");s.src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";s.onerror=function(){var el=document.getElementById("g-translate-el");if(el)el.innerHTML='<a href="https://translate.google.com/translate?sl=en&u='+encodeURIComponent(location.href)+'" target="_blank" style="color:rgba(255,255,255,0.5);font-size:0.75rem;text-decoration:none;">Translate</a>';};document.head.appendChild(s);});
+window.addEventListener("load",function(){var s=document.createElement("script");s.src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";s.onerror=function(){var el=document.getElementById("g-translate-el");if(el)el.innerHTML='<a href="https://translate.google.com/translate?sl=en&u='+encodeURIComponent(location.href)+'" target="_blank" style="color:rgba(255,255,255,0.5);font-size:0.75rem;">Translate</a>';};document.head.appendChild(s);});
 </script>
 
 
 <!-- FLOATING LEO -->
-
 <div id="leo-speech">Hi! I'm Leo! 🦁 Need help?</div>
 
 <!-- NAV -->
@@ -507,7 +504,6 @@ window.addEventListener("load",function(){var s=document.createElement("script")
     </div>
     <div class="story-timeline">
 
-      <!-- Scene 1 -->
       <div class="story-scene">
         <div class="story-img-wrap">
           <img id="story-img-1" class="story-img" alt="Leo walking alone, sad"/>
@@ -522,7 +518,6 @@ window.addEventListener("load",function(){var s=document.createElement("script")
         </div>
       </div>
 
-      <!-- Scene 2 -->
       <div class="story-scene reverse">
         <div class="story-img-wrap">
           <img id="story-img-2" class="story-img" alt="Leo discovers his rights"/>
@@ -537,10 +532,9 @@ window.addEventListener("load",function(){var s=document.createElement("script")
         </div>
       </div>
 
-      <!-- Scene 3 -->
       <div class="story-scene">
         <div class="story-img-wrap">
-          <img id="story-img-3" class="story-img" alt="Leo pressing SOS"/>
+          <img id="story-img-3" class="story-img" alt="Leo with SOS button"/>
           <div class="story-scene-num" style="background:var(--red);">3</div>
         </div>
         <div class="story-content">
@@ -552,7 +546,6 @@ window.addEventListener("load",function(){var s=document.createElement("script")
         </div>
       </div>
 
-      <!-- Scene 4 -->
       <div class="story-scene reverse">
         <div class="story-img-wrap">
           <img id="story-img-4" class="story-img" alt="Leo launched like a rocket"/>
@@ -567,7 +560,6 @@ window.addEventListener("load",function(){var s=document.createElement("script")
         </div>
       </div>
 
-      <!-- Scene 5 -->
       <div class="story-scene">
         <div class="story-img-wrap">
           <img id="story-img-5" class="story-img" alt="Leo with nurse and paramedic"/>
@@ -576,13 +568,12 @@ window.addEventListener("load",function(){var s=document.createElement("script")
         <div class="story-content">
           <div class="story-chapter" style="color:var(--gold);">Chapter Five · The Help</div>
           <h3 class="story-heading">Trusted adults were there for them 💙</h3>
-          <p class="story-text">The field officer helped Leo get legal support for his friend. Doctors, teachers and paramedics were all there to help.</p>
-          <p class="story-text">The NCPA helpline 1929 was free, 24 hours a day. Leo's friend was not alone anymore.</p>
+          <p class="story-text">The field officer helped Leo get legal support for his friend. Doctors, teachers and paramedics were all there to help. The NCPA helpline 1929 was free, 24 hours a day.</p>
+          <p class="story-text">Leo's friend was not alone anymore.</p>
           <div class="story-quote">"There are people who care about my friend too. We just didn't know how to find them."</div>
         </div>
       </div>
 
-      <!-- Scene 6 -->
       <div class="story-scene reverse">
         <div class="story-img-wrap">
           <img id="story-img-6" class="story-img" alt="Leo running home to family"/>
@@ -594,7 +585,7 @@ window.addEventListener("load",function(){var s=document.createElement("script")
           <p class="story-text">Leo ran home with his friend beside him. Together they became JusticeKids Rights Champions. Now Leo helps other children learn their rights too.</p>
           <p class="story-text">Because when you know your rights — you can protect yourself and the people you care about.</p>
           <div class="story-quote">"My friend needed help. I found it. Now I want every child in Sri Lanka to know — help is always there."</div>
-          <a href="#rights" class="btn btn-teal" style="margin-top:16px;display:inline-block;">Learn YOUR Rights like Leo →</a>
+          <a href="#rights" class="btn-primary" style="display:inline-block;margin-top:20px;text-decoration:none;">Learn YOUR Rights like Leo →</a>
         </div>
       </div>
 
@@ -776,7 +767,7 @@ window.addEventListener("load",function(){var s=document.createElement("script")
         <div style="color:rgba(255,255,255,0.7);font-weight:700;margin-bottom:12px;">Contact</div>
         <div class="footer-links">
           <a href="tel:+94773622211">📞 +94 77 362 2211</a>
-          <a href="/cdn-cgi/l/email-protection#771601120518120f0718050337101a161e1b5914181a">✉️ <span class="__cf_email__" data-cfemail="e78691829588829f97889593a7808a868e8bc984888a">[email&#160;protected]</span></a>
+          <a href="/cdn-cgi/l/email-protection#d1b0a7b4a3beb4a9a1bea3a591b6bcb0b8bdffb2bebc">✉️ <span class="__cf_email__" data-cfemail="ef8e998a9d808a979f809d9baf88828e8683c18c8082">[email&#160;protected]</span></a>
           <a href="https://acedynamicstrading.github.io/justicekids/parents.html">👪 For Parents</a>
           <a href="https://acedynamicstrading.github.io/justicekids/teachers.html">📚 For Teachers</a>
         </div>
@@ -799,11 +790,13 @@ function loadImages() {
   // These will be set by the image injection below
   const map = {
     'story-img-1': IMGS.sad,
-    'story-img-2': IMGS.rights,
+    'story-img-2': IMGS.hero,
     'story-img-3': IMGS.sos,
-    'story-img-4': IMGS.rocket,
+    'story-img-4': IMGS.pointing,
     'story-img-5': IMGS.medical,
     'story-img-6': IMGS.family,
+    'ask-leo-img': IMGS.hero,
+    'consult-leo-img': IMGS.hero,
     'score-leo-img': IMGS.pointing,
   };
   Object.entries(map).forEach(([id, src]) => {
