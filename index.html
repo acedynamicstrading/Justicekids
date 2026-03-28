@@ -24,14 +24,10 @@ button{cursor:pointer;border:none;outline:none;font-family:'Nunito',sans-serif}
 /* ── FLOATING LEO ── */
 #leo-float{
   position:fixed;bottom:20px;right:20px;z-index:500;
-  width:70px;height:70px;cursor:pointer;
+  width:90px;cursor:pointer;
   animation:floatBob 3s ease-in-out infinite;
   filter:drop-shadow(0 8px 16px rgba(0,0,0,0.2));
   transition:transform 0.2s;
-  font-size:48px;display:flex;align-items:center;justify-content:center;
-  background:var(--teal);border-radius:50%;
-  box-shadow:0 4px 20px rgba(18,168,155,0.4);
-  text-decoration:none;border:none;
 }
 #leo-float:hover{transform:scale(1.1);}
 @keyframes floatBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
@@ -429,7 +425,8 @@ footer{
 .delay-2{animation-delay:0.2s}
 .delay-3{animation-delay:0.3s}
 .delay-4{animation-delay:0.4s}
-
+#leo-float{display:none!important;}
+#hero-leo{display:none!important;}
 </style>
 </head>
 <body>
@@ -455,7 +452,6 @@ window.addEventListener("load",function(){var s=document.createElement("script")
 
 <!-- FLOATING LEO -->
 <div id="leo-speech">Hi! I'm Leo! 🦁 Need help?</div>
-<div id="leo-float" onclick="toggleLeoBubble()" title="Ask Leo!" style="cursor:pointer;">🦁</div>
 
 <!-- NAV -->
 <nav>
@@ -490,7 +486,11 @@ window.addEventListener("load",function(){var s=document.createElement("script")
       <a href="#quiz" class="btn-secondary">🧠 Take the Quiz</a>
       <a href="https://acedynamicstrading.github.io/justicekids/minor-protection.html" class="btn-sos-big">🆘 I Need Help Now</a>
     </div>
-
+    <div class="hero-langs">
+      <span>🇱🇰 සිංහල</span>
+      <span>🇱🇰 தமிழ்</span>
+      <span>🇬🇧 English</span>
+    </div>
   </div>
 </section>
 
@@ -728,13 +728,9 @@ window.addEventListener("load",function(){var s=document.createElement("script")
     <h2 class="emergency-title">🆘 Are You in Trouble Right Now?</h2>
     <p class="emergency-sub">If you feel unsafe or someone is hurting you, reach out immediately. These helplines are free and confidential.</p>
     <div class="emergency-btns">
-      <a href="tel:1929" class="e-btn red">📞 NCPA Child Helpline: 1929</a>
+      <a href="tel:1929" class="e-btn red">📞 NCPA: 1929</a>
       <a href="tel:119" class="e-btn">🚔 Police: 119</a>
-      <a href="tel:110" class="e-btn">🔥 Fire & Rescue: 110</a>
-      <a href="tel:109" class="e-btn">🛡️ Child Abuse Bureau: 109</a>
       <a href="tel:1938" class="e-btn">👩‍👧 Women & Children: 1938</a>
-      <a href="tel:0112433618" class="e-btn">⚖️ Legal Aid: 011 243 3618</a>
-      <a href="tel:1990" class="e-btn">🚑 Ambulance: 1990</a>
       <a href="https://acedynamicstrading.github.io/justicekids/minor-protection.html" class="e-btn red">🛡️ Safe Help Portal</a>
     </div>
   </div>
@@ -747,7 +743,7 @@ window.addEventListener("load",function(){var s=document.createElement("script")
     <div class="section-tag">👨‍⚖️ Free Legal Help</div>
     <h2 class="section-title">Talk to a Real Lawyer — <span>For Free</span></h2>
     <p class="section-sub">LexLK connects you with qualified Sri Lankan attorneys at no cost. Book your free 30-minute consultation today.</p>
-    <a href="https://calendly.com/lexlkforms/30min" class="btn-primary" target="_blank" rel="noopener noreferrer" style="display:inline-block;font-size:16px;padding:14px 32px;">📅 Book Free Consultation</a>
+    <a href="https://calendly.com/lexlkforms/30min" class="btn-primary" style="display:inline-block;font-size:16px;padding:14px 32px;">📅 Book Free Consultation</a>
   </div>
 </section>
 
@@ -764,8 +760,6 @@ window.addEventListener("load",function(){var s=document.createElement("script")
         <div class="footer-links">
           <a href="https://acedynamicstrading.github.io/justicelk/">⚖️ JusticeLK CMS</a>
           <a href="https://acedynamicstrading.github.io/Lexlk/">👨‍⚖️ LexLK Legal Services</a>
-          <a href="https://acedynamicstrading.github.io/JusticeSL/">🌐 JusticeSL</a>
-          <a href="https://acedynamicstrading.github.io/Justiceecosystem/">🏛️ Justice Ecosystem</a>
           <a href="https://acedynamicstrading.github.io/justicekids/minor-protection.html">🛡️ Safe Help Portal</a>
         </div>
       </div>
@@ -773,26 +767,15 @@ window.addEventListener("load",function(){var s=document.createElement("script")
         <div style="color:rgba(255,255,255,0.7);font-weight:700;margin-bottom:12px;">Contact</div>
         <div class="footer-links">
           <a href="tel:+94773622211">📞 +94 77 362 2211</a>
-          <a href="mailto:acedynamicstrading@gmail.com">✉️ acedynamicstrading@gmail.com</a>
+          <a href="/cdn-cgi/l/email-protection#d1b0a7b4a3beb4a9a1bea3a591b6bcb0b8bdffb2bebc">✉️ <span class="__cf_email__" data-cfemail="ef8e998a9d808a979f809d9baf88828e8683c18c8082">[email&#160;protected]</span></a>
           <a href="https://acedynamicstrading.github.io/justicekids/parents.html">👪 For Parents</a>
           <a href="https://acedynamicstrading.github.io/justicekids/teachers.html">📚 For Teachers</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div style="font-size:11px;color:rgba(255,255,255,0.35);line-height:1.6;">
-        © 2024–2026 <strong style="color:rgba(255,255,255,0.6);">Elmo Richard Pereira</strong>. All rights reserved.
-        The Justice LK Ecosystem (JusticeLK · JusticeKids · LexLK · JusticeSL), including all source code, AI systems,
-        original characters (including Leo the Lion Cub), stories, designs, curricula, and content are the exclusive
-        intellectual property of Elmo Richard Pereira. Protected under the
-        <strong style="color:rgba(255,255,255,0.5);">Intellectual Property Act No. 36 of 2003</strong> of Sri Lanka
-        and the Berne Convention. Ace Dynamics Trading operates under licence. Unauthorised reproduction strictly prohibited.
-      </div>
-      <div style="margin-top:8px;display:flex;gap:16px;flex-wrap:wrap;">
-        <a href="https://acedynamicstrading.github.io/Justiceecosystem/privacy-policy.html" style="color:rgba(255,255,255,0.4);font-size:12px;">Privacy Policy</a>
-        <a href="https://acedynamicstrading.github.io/Justiceecosystem/copyright.html" style="color:rgba(255,255,255,0.4);font-size:12px;">Copyright & IP</a>
-        <a href="https://acedynamicstrading.github.io/Justiceecosystem/#legal" style="color:rgba(255,255,255,0.4);font-size:12px;">Terms of Use</a>
-      </div>
+      <div>© 2026 JusticeLK · JusticeKids · LexLK · Sri Lanka</div>
+      <div><a href="https://acedynamicstrading.github.io/justicekids/privacy-policy.html" style="color:rgba(255,255,255,0.4);">Privacy Policy</a></div>
     </div>
   </div>
 </footer>
@@ -1048,9 +1031,9 @@ function downloadCert() {
 function copyShare() {
   const name = document.getElementById('score-name').value.trim() || 'I';
   const msg = `🦁⚖️✨ ${name} is a JusticeKids Rights Champion! I scored ${score}/${QUESTIONS.length} on the JusticeKids quiz! 🦸🌟🇱🇰\n\nLearn your rights at: https://acedynamicstrading.github.io/justicekids/`;
-  const waUrl = 'https://wa.me/?text=' + encodeURIComponent(msg);
-  window.open(waUrl, '_blank', 'noopener,noreferrer');
-  document.getElementById('share-msg').textContent = '✓ WhatsApp opened!';
+  navigator.clipboard.writeText(msg).then(() => {
+    document.getElementById('share-msg').textContent = '✓ Copied! Paste in WhatsApp or Telegram.';
+  });
 }
 
 // ── ASK LEO (AI) ──
@@ -1104,23 +1087,8 @@ function toggleLeoBubble() {
 
 // ── LANGUAGE ──
 function setLang(lang) {
-  // Drive Google Translate programmatically
-  const select = document.querySelector('.goog-te-combo');
-  if (select) {
-    select.value = lang;
-    select.dispatchEvent(new Event('change'));
-  } else {
-    // Fallback: use Google Translate URL approach
-    const current = location.href;
-    if (lang === 'en') {
-      // Reset to English - reload without translate
-      const trl = document.querySelector('iframe.goog-te-banner-frame');
-      if (trl) { trl.contentWindow.document.getElementById('restore').click(); }
-      else { location.reload(); }
-    } else {
-      location.href = 'https://translate.google.com/translate?sl=en&tl=' + lang + '&u=' + encodeURIComponent(current);
-    }
-  }
+  // Placeholder — full i18n can be implemented
+  console.log('Language set to:', lang);
 }
 
 // ── INIT ──
